@@ -48,10 +48,10 @@ export class MaterialAngularSelectComponent implements OnInit, OnChanges, AfterV
 
   public id: string;
 
-  @ViewChild('dropdown') dropdown: ElementRef;
-  @ViewChild('input') input: ElementRef;
-  @ViewChild('hiddenInput') hiddenInput: ElementRef;
-  @ViewChild('menu') menu: ElementRef;
+  @ViewChild('dropdown', {static: true}) dropdown: ElementRef;
+  @ViewChild('input', {static: true}) input: ElementRef;
+  @ViewChild('hiddenInput', {static: true}) hiddenInput: ElementRef;
+  @ViewChild('menu', {static: true}) menu: ElementRef;
   @ViewChildren('li') list: QueryList<ElementRef>;
 
   private opened = false;
